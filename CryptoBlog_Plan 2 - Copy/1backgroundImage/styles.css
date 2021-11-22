@@ -1,0 +1,148 @@
+@import "imports/links.css";
+@import "imports/variables.css";
+
+@font-face {
+  font-family: "Boots And Spurs";
+  src: url("../fonts/BootsAndSpurs.ttf") format("truetype");
+}
+
+body {
+  font-family: var(--text-paragraph), Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100vh;
+  margin: 0px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+h1,
+h2,
+.logo {
+  font-family: var(--text-heading), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.product-list h2 {
+  font-family: var(--text-paragraph), Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* HEADER AND FOOTER - NAV START*/
+
+.fa, .fab, .fad, .fal, .far, .fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  margin: 10px;
+}
+
+
+a.logo {
+  width: 300px;
+
+  font-size: 30px;
+
+
+  
+}
+
+/*since we're experiencing flext items that adapt and move with the user, we just haave to set a certain width to give these room to breathe, liek with our a.logo*/
+/*<a href="index.html" class="logo">Guitar Kings</a>  === a.logo*/
+
+.topNav {
+  position: fixed;
+  float: right;
+  text-align: right;
+  width: 100%;
+ 
+
+
+
+
+}
+header, footer {
+    background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1.5rem;
+
+}
+
+header {
+
+  background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/05/44/b6/28/borneo-nature-lodge.jpg);
+
+}
+
+nav {
+  text-align: right;
+  margin-left: 25px;
+  display: none;
+  position: fixed;
+  top: 45px;
+  /*background: var(--color-header-footer);  this removes the background-color we've set*/
+  z-index: 1000;
+  right: 0px;
+
+ /* this is it, checked on footer hyptothessi; to the right, need a bigger nax box for it to place itself ot the furthes  right, the relative right nav box*/
+  
+  
+  /* the nav lives on it's own, it only accounts for the three home guitars and contact*/
+  
+}
+
+
+nav ul {
+  
+
+  padding: 0px;
+  word-spacing: 50px;
+ 
+  
+
+}
+
+nav li {
+ 
+  padding: 20px 30px;
+  text-align: right;
+  margin-right: 20px;
+
+  /*the nad need to be wider for it to send anything to thhe right*/
+  
+}
+
+
+ul {
+  text-align: right;
+  margin-right: 2rem;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+header,
+footer {
+ 
+  color: #fff;
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  display: inline-block; /*I have now made the footer stay on the bottom, outside fo the viewport when the page needs spcae, it holds it's own opsition beutfyÆ*/
+}
+
+
+/* HEADER AND FOOTER - NAV STOP*/

@@ -48,7 +48,8 @@
     nav {
       background-color:transparent;
       display:block;
-      position: static;
+   
+      top: 0;
     }
   
     nav li {
@@ -58,6 +59,9 @@
   
     header label {
       display: none;
+
+      position: absolute;
+      top: 0;
     }
   
   

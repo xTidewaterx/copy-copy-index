@@ -1,3 +1,7 @@
+/*you jsut take all of this and reorganise it */
+
+
+
 @import "imports/links.css";
 @import "imports/variables.css";
 
@@ -6,13 +10,28 @@
   src: url("../fonts/BootsAndSpurs.ttf") format("truetype");
 }
 
+
+
 body {
   font-family: var(--text-paragraph), Verdana, Geneva, Tahoma, sans-serif;
-  min-height: 100vh;
+  min-height: 100%;
   margin: 0px;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  overflow: auto;
 }
+
+
+
+html {
+  font-family: var(--text-paragraph), Verdana, Geneva, Tahoma, sans-serif;
+  height: 100%;
+  overflow-y: scroll;
+ 
+
+
+}
+
 
 h1,
 h2,
@@ -46,6 +65,10 @@ a.logo {
   font-size: 30px;
 
 
+position: absolute;
+  top: 0;
+
+
   
 }
 
@@ -53,10 +76,12 @@ a.logo {
 /*<a href="index.html" class="logo">Guitar Kings</a>  === a.logo*/
 
 .topNav {
-  position: fixed;
-  float: right;
+ 
+
   text-align: right;
-  width: 100%;
+  width: 90%;
+  position: absolute;
+  top:0;
  
 
 
@@ -68,21 +93,26 @@ header, footer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 1.5rem;
+  padding: 1.5vh;
 
 }
 
 header {
-
-  background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/05/44/b6/28/borneo-nature-lodge.jpg);
+  display: absolute;
+  background-image: url("../1backgroundImage/cryptoBackground.jpg");
+background-size: cover;  /*important so it covers the header*/
+height: 40vh;
+width: 100vw;
 
 }
 
 nav {
+  position: absolute
+  ;
   text-align: right;
   margin-left: 25px;
   display: none;
-  position: fixed;
+
   top: 45px;
   /*background: var(--color-header-footer);  this removes the background-color we've set*/
   z-index: 1000;
@@ -130,19 +160,151 @@ ul {
   display: block;
 }
 
+
+
 header,
 footer {
  
   color: #fff;
+  
 }
 
 
 
 footer {
+  overflow-x: hidden;
   text-align: center;
   padding: 20px;
-  display: inline-block; /*I have now made the footer stay on the bottom, outside fo the viewport when the page needs spcae, it holds it's own opsition beutfyÆ*/
+ /*I have now made the footer stay on the bottom, outside fo the viewport when the page needs spcae, it holds it's own opsition beutfyÆ*/
 }
 
 
 /* HEADER AND FOOTER - NAV STOP*/
+
+
+
+main {
+
+  height: inherit;
+
+  width: 100%;
+  display: table;  /*this made it all functionnnnn footer, body expandable customizeddd*/
+  display: table;  /*this made it all functionnnnn footer, body expandable customizeddd*/
+ 
+  
+}
+
+
+
+.blogPosts {
+-webkit-column-gap: 30px;
+-moz-column-gap: 30px;
+  column-count: 2;
+  margin-top: 20px;
+  display: flexbox;
+  margin: 0 auto;
+  align-content: center;
+  column-gap: 100px;
+  width: 70vw;
+
+
+}
+
+.blogPostContainer {
+  overflow-x: hidden;
+ width: 70vw;
+
+
+}
+
+.blogPostsContainer {
+
+
+  width: 100vw;
+}
+
+
+
+a {
+ text-decoration: none; /*this made the underlines go away on the a links*/
+  text-align: center;
+}
+
+img {
+/*all is now centered due to display flex with margin: 0 auto; on the img, on the text we used text-align: center;*/
+  display: flex;
+  margin: 
+  0 auto;
+ 
+ 
+}
+
+
+a.blogPosts :nth-child(1) {
+  margin-top: 0;
+}
+
+/*now, all the columns are the same height, except a few differences due to some headlines stretching past two lines making the card a little taller, thank to column-count 2 and removing the default margin on the first child*/
+
+main.container.content {
+
+  margin-top: -400px;
+}
+
+
+.blogPosts {
+ width: 70vw;
+  height: auto;
+ 
+
+}
+
+
+
+a.blogPosts {
+  width: 40vw;
+   height: auto;
+ 
+ 
+   background:white 50%;
+   background-size: cover;
+ }
+
+.cardColour {
+
+  display: block;
+
+   width: 16vw;
+   height: auto;
+   padding: 40px;
+   background:rgb(255, 0, 0) 50%;
+   background-size: cover;
+   border-radius: 5%;
+   margin-bottom: 20vw;
+   max-height: 35vw;
+   min-height: 30vw;
+   min-height: 40vw;
+ }
+
+ h5 {
+
+   font-size: 3vw;
+ }
+
+ .cardColour {
+
+  display: block;
+
+   width: 16vw;
+   height: auto;
+   padding: 40px;
+   background:rgb(255, 0, 0) 50%;
+   background-size: cover;
+   border-radius: 5%;
+   margin-bottom: 20vw;
+   max-height: 35vw;
+   min-height: 30vw;
+   min-height: 40vw;
+ }
+
+ /*important, this setup ensures equally sized boxes across all viewPorts, despite the inherit differences of different layouts*/
